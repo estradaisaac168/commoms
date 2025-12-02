@@ -1,0 +1,19 @@
+//Primero agregar en libs.version.toml
+[versions]
+kspV = "2.0.21-1.0.25"
+
+[plugins]
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspV"}
+
+
+//Segundo agregar en build.gradle.kts (Modulo)
+plugins {
+      alias(libs.plugins.ksp)
+}
+
+//Tercero agregar en gradle.properties
+ksp.incremental = false
+
+//Cuarto sincronizar.
+
+
