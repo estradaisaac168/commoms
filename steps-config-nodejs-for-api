@@ -15,4 +15,72 @@ npx tsc --init #inicializa typescript
 
 # create folder src en la raiz del project
 # Dentro de la carpeta Crear un archivo server.js
-# y todos los archivos necesarios
+# config initial for test
+// import express from 'express';
+// import cors from 'cors';
+// import dotenv from 'dotenv';
+// import path from "path";
+// import { fileURLToPath } from 'url';
+
+// dotenv.config()
+
+// const app = express()
+
+// app.use(cors())
+// app.use(express.json())
+
+// app.get("/", (req, res)=>{
+//     res.json({
+//         message : "API with node.js"
+//     });
+// });
+
+// const PORT = process.env.PORT || 3000;
+
+// app.listen(PORT, ()=>{
+//     console.log(`Server running port: ${PORT}`);
+// });
+
+
+#correr el servidor
+#dentro de   
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc"
+},
+
+#despues de esto instalar
+npm i -D tsx
+npm run dev
+
+#Probar api con Postman en esta ruta
+http://localhost:3000/ 
+
+
+#Para trabajar con MYSQL instalar 
+npm i prisma @prisma/client
+Buscar el script para que sea la version prisma 6
+
+#despues correr 
+npx prisma init
+
+
+// Crear el modelo y despues dar
+npx prisma migrate dev --name create_users_table 
+
+
+npm i bcryptjs zod
+npm i -D @types/bcryptjs
+
+
+You may use prisma migrate reset to drop the development database.
+All data will be lost.
+
+
+npm i jsonwebtoken
+npm i -D @types/jsonwebtoken
+
+//Libreria que permite trabajar con archivos
+npm i multer
+npm i -D @types/multer
