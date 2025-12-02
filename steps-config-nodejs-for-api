@@ -1,0 +1,18 @@
+npm init -y
+npm i express
+npm i express cors dotenv
+npm i --save-dev typescript ts-node-dev @types/express @types/node @types/cors
+npx tsc --init #inicializa typescript
+
+# Into package.json
+# Modifify "type": "commonjs" to   "type": "module"
+
+#Into tsconfig.json
+# Add this line   "include": ["src/**/*"] before the end "}"
+# Add this line "moduleResolution": "nodenext", after     "module": "nodenext",
+
+# save
+
+# create folder src en la raiz del project
+# Dentro de la carpeta Crear un archivo server.js
+# y todos los archivos necesarios
